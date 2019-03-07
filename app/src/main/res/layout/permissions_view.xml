@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".security.Permissions_view">
+    <TextView
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Permissions"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/harm_img"
+        android:src="@drawable/harm"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:id="@+id/permissions_tv"
+            android:gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gitam.backgroundservice">
+
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.CLEAR_APP_CACHE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.DELETE_CACHE_FILES"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/secure"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.gitam.backgroundservice.security.Scanning"></activity>
+        <activity android:name="com.gitam.backgroundservice.security.Subhome" />
+        <activity android:name="com.gitam.backgroundservice.security.Permissions_view" />
+        <activity android:name="com.gitam.backgroundservice.security.Trail" />
+        <activity android:name="com.gitam.backgroundservice.security.Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.gitam.backgroundservice.SensorService"
+            android:enabled="true" />
+
+        <receiver
+            android:name="com.gitam.backgroundservice.SensorRestarterBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="RestartServiceWhenStopped" />
+
+        <activity android:name="com.gitam.backgroundservice.MainActivity" />
+        <activity android:name="com.gitam.backgroundservice.Testing" />
+    </application>
+
+</manifest>
